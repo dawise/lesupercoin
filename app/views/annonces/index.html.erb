@@ -1,0 +1,39 @@
+
+  <h1 class="col-xs-offset-1">Toutes les annonces</h1>
+
+
+  <table>
+
+    <% @annonces.each do |annonce| %>
+      <tr class="row">
+        <td class="col-xs-2">
+          <%= link_to annonce.title, annonce_path(annonce) %>
+        </td>
+        <td class="col-xs-2">
+          <%= annonce.price.to_s %> €
+        </td>
+        <td class="col-xs-2">
+          by <%= annonce.author %>
+        </td>
+        <td class="col-xs-2">
+          <%= annonce.telephone %>
+        </td>
+        <td class="col-xs-2 annonce-images">
+          <%= image_tag annonce.picture_url, size: "60x60", alt: annonce.title %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+
+  <%= link_to welcome_path do %>
+    <button class="btn btn-primary">Test</button>
+  <% end %>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,9 @@
+<h1><%= @annonce.title %></h1>
+<p><%= @annonce.price %> €</p>
+<p><%= @annonce.author %></p>
+<p><%= @annonce.telephone %></p>
+<div>
+  <%= image_tag @annonce.picture_url, size: '640x480', alt: @annonce.title %>
+</div>
+
+<%= link_to "Back", annonces_path %>
