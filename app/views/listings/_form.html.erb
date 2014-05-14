@@ -1,0 +1,23 @@
+<%= form_for @listing do |form| %>
+  <div>
+    <%= form.label :title, "Titre de l'annonce" %>
+    <%= form.text_field :title %>
+  </div>
+  <div>
+    <%= form.label :price, "Prix" %>
+    <%= form.number_field :price %>
+  </div>
+  <div>
+    <%= form.label :author, "Auteur de l'annonce" %>
+    <%= form.text_field :author %>
+  </div>
+  <div>
+    <%= form.label :telephone, "Numéro de téléphone" %>
+    <%= form.text_field :telephone %>
+  </div>
+  <div>
+    <%= form.label :picture_url, "URL de l'image" %>
+    <%= form.text_field :picture_url %>
+  </div>
+  <%= form.submit %>
+<%end %>

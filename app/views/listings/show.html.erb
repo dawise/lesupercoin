@@ -1,0 +1,13 @@
+<p><%= flash[:info]%></p>
+<h1><%= @listing.title %></h1>
+<p><%= @listing.price %> €</p>
+<p><%= @listing.author %></p>
+<p><%= @listing.telephone %></p>
+<div>
+  <%= image_tag @listing.picture_url, size: '640x480', alt: @listing.title %>
+</div>
+
+<%= link_to "Retour", listings_path %>
+<%= link_to "Editer cette annonce", edit_listing_path(@listing) %>
+<%= link_to "Supprimer cette annonce", listing_path(@listing), method: 'delete' %>
+

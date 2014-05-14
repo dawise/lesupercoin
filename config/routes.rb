@@ -1,20 +1,4 @@
-Rails.application.routes.draw do
-
-  # root 'annonces#welcome'
-
-  get '/' => 'annonces#welcome', as: 'welcome'
-
-  get 'annonces' => 'annonces#index', as: 'annonces'
-
-  get 'annonces/new' => 'annonces#new', as: 'new_annonce'
-
-  get 'annonces/:id' => 'annonces#show', as: 'annonce'
-
-  post 'annonces' => 'annonces#create' # on a deja le helper annonces_path pr l'index
-
-
-
-  # The priority is based upon order of creation: first created -> highest priority.
+# The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
@@ -68,4 +52,7 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+Rails.application.routes.draw do
+  root 'listings#welcome'
+  resources :listings
 end

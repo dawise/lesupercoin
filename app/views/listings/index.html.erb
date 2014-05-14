@@ -1,0 +1,39 @@
+
+  <h1 class="col-xs-offset-1">Toutes les annonces</h1>
+
+  <p><%= flash[:info]%></p>
+  <table>
+
+    <% @listings.each do |listing| %>
+      <tr class="row">
+        <td class="col-xs-2">
+          <%= link_to listing.title, listing_path(listing) %>
+        </td>
+        <td class="col-xs-2">
+          <%= listing.price.to_s %> €
+        </td>
+        <td class="col-xs-2">
+          by <%= listing.author %>
+        </td>
+        <td class="col-xs-2">
+          <%= listing.telephone %>
+        </td>
+        <td class="col-xs-2 listing-images">
+          <%= image_tag listing.picture_url, size: "60x60", alt: listing.title %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+
+  <%= link_to root_path do %>
+    <button class="btn btn-primary">Back</button>
+  <% end %>
+
+
+
+
+
+
+
+
+

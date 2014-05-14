@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20140513131846) do
 
-  create_table "annonces", force: true do |t|
+  create_table "listings", force: true do |t|
     t.string   "picture_url"
     t.string   "title"
     t.integer  "price"
